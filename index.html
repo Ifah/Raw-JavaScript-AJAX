@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script src="js/ajax.js"></script>
+	<script>
+		app.ajax('file.json', function(data, xmlhttp){
+			data = JSON.parse(data);
+			console.log(data.name);
+		}, function(error, xmlhttp){
+			console.log("Oops: ", error);
+		});
+	</script>
+</body>
+</html>
